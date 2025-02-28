@@ -1,0 +1,319 @@
+/********** Template CSS **********/
+:root {
+    --primary: #34AD54;
+    --secondary: #FF9933;
+    --light: #F6FFF2;
+    --dark: #263A4F;
+}
+
+.btn {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: .5s;
+}
+
+.btn-primary,
+.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 28px;
+    height: 28px;
+}
+
+.btn-lg-square {
+    width: 46px;
+    height: 46px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 0;
+    border-radius: 0;
+    z-index: 99;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    padding: 20px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    transition: .5s;
+    display: inline-block; /* Ensures horizontal alignment */
+}
+
+.sticky-top.navbar-dark .navbar-nav .nav-link {
+    padding: 15px 10px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    background: var(--secondary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-dark .navbar-nav {
+        display: flex;
+        justify-content: space-around; /* Space out items for small screens */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        padding: 10px 15px;
+        font-size: 14px; /* Slightly smaller font size for medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-dark .navbar-nav {
+        display: flex;
+        justify-content: center; /* Center content for very small devices */
+        flex-direction: column; /* Stack nav items vertically */
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        padding: 10px;
+        font-size: 13px; /* Adjust font size for smaller screens */
+        color: #FFFFFF !important; /* Ensure links are white on very small screens */
+    }
+
+    .carousel-caption h4 {
+        font-size: 18px;
+        font-weight: 500 !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 30px;
+        font-weight: 600 !important;
+    }
+}
+  /* General Navbar Styling */
+  .navbar {
+    background-color:green; /* Primary blue */
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-links a {
+    padding: 20px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.nav-links a:hover {
+    background: var(--secondary, rgba(255, 255, 255, 0.2));
+}
+
+
+/* Hide the checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.navbar h2{
+    color: white;
+}
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 50%;
+        background: rgba(0, 128, 0, 0.8); /* Green with 80% opacity */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        text-align: end;
+       
+        margin-right: 5px;
+        border-radius: 7px;
+    }
+    .navbar{
+        justify-content: left;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px;
+    }
+
+    /* Show menu when checkbox is checked */
+    #menu-toggle:checked + .nav-links {
+        display: flex;
+    }
+    .collapse .col-8{
+        width: 90%;
+        
+    }
+    .col-lg-3{
+        max-width: 180px;
+        display: none;
+    }
+    .row{
+        display: flex;
+        justify-content: center;
+    }
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.dropdown-button i {
+    font-size: 14px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 5px;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: rgb(39, 35, 35) !important;
+    text-transform: none;
+    margin: 5px;
+    font-size: 14px;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background: #f1f1f1;
+    color: rgb(180, 2, 2) !important;
+}
+
+/* Remove border from the last item */
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+/* Show dropdown when hovering over "Get Involved" */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.bg-vegetable {
+    background: linear-gradient(rgba(52, 173, 84, .2), rgba(52, 173, 84, .2)), url(../img/vegetable.png) bottom right no-repeat;
+    background-size: contain;
+}
+
+.bg-fruit {
+    background: linear-gradient(rgba(255, 153, 51, .2), rgba(255, 153, 51, .2)), url(../img/fruit.png) bottom right no-repeat;
+    background-size: contain;
+}
+
+.service-item {
+    box-shadow: 0 0 45px #EDEDED;
+    transition: .5s;
+}
+
+.about i,
+.service-item i {
+    background-image: linear-gradient(var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: .5s;
+}
+
+.service-item:hover {
+    color: var(--light);
+    background: var(--primary) !important;
+}
+
+.service-item:hover i {
+    background-image: linear-gradient(var(--light), var(--secondary));
+}
+
+.service-item:hover h4 {
+    transition: .5s;
+}
+
+.service-item:hover h4 {
+    color: var(--light);
+}
+
+
+
+
+.bg-footer {
+    background: linear-gradient(rgba(52, 173, 84, .7), rgba(52, 173, 84, .7)), url(../img/footer.png) center bottom no-repeat;
+    background-size: contain;
+}
+
+@media (min-width: 991.98px) {
+    .bg-footer {
+        margin-top: 90px !important;
+    }
+}

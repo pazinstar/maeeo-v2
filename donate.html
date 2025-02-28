@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MAEEO</title>
+    <link rel="icon" type="image/png" href="img/logo.jpg">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+ 
+
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid px-5 d-none d-lg-block">
+        <div class="row gx-5 py-3 align-items-center">
+            <div class="col-lg-3">
+                <div class="d-flex align-items-center justify-content-start">
+                    <i class="bi bi-phone-vibrate fs-1 text-primary me-2"></i>
+                    <h2 class="mb-0">0722 469 720</h2>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="d-flex flex-column align-items-center justify-content-center">
+                    <a href="index.html" class="navbar-brand ms-lg-5">
+                        <h1 class="m-0 display-4 text-primary"><span class="text-secondary">MA</span>EEO</h1>
+                       
+                    </a>
+                    <marquee style="color:green;" behavior="" direction="left">Mundu Agricultural Environmental and Educational Organization</marquee>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="d-flex align-items-center justify-content-end">
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-x"><STRong>X</STRong></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <nav class="navbar">
+
+        <label for="menu-toggle" class="hamburger">☰</label>
+        <input type="checkbox" id="menu-toggle">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Service</a>
+            <a href="contact.html">Contact</a>
+            <a href="gallery.html">Gallery</a>
+              <div class="dropdown">
+                <a class="dropdown-button">
+                    Get Involved <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-content">
+                    <a href="soon.html">
+                        <i class="fas fa-handshake"></i> Volunteer
+                    </a>
+                    <a href="donate.html">
+                        <i class="fas fa-donate"></i> Donate
+                    </a>
+                    <a href="soon.html">
+                        <i class="fas fa-users"></i> Partner With Us
+                    </a>
+                    <a href="soon.html">
+                        <i class="fas fa-calendar-alt"></i> Attend Events
+                    </a>
+                    <a href="soon.html">
+                        <i class="fas fa-gavel"></i> Tenders
+                    </a>
+                    <a href="soon.html">
+                        <i class="fas fa-briefcase"></i> Careers
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <style>
+   
+   
+    
+    #container {
+        margin: 30px auto;
+        width: 60%;
+    }
+    
+    #container #card {
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background: #fff;
+        border-radius: 0px;
+    }
+    
+    body {
+        background: #eee;
+    }
+    
+    #btn-primary {
+    background-color: #ddd;
+    color: black;
+    box-shadow: none;
+    border: none;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    transition: background 1.4s ease;
+}
+
+/* Background color change after 2 seconds */
+#btn-primary:hover {
+    background:  #28a745;
+    color: white;
+}
+
+    
+    #btn-primary:focus {
+        box-shadow: none;
+    }
+    
+    #container #card #img-box {
+        width: 80px;
+        height: 50px;
+    }
+    
+    #container #card img {
+        width: 100%;
+        object-fit: fill;
+    }
+    
+    #container #card #number {
+        font-size: 24px;
+    }
+    
+    #container #card-body #btn-primary #fab-cc-paypal {
+        font-size: 32px;
+        color: #3333f7;
+    }
+    
+    #fab-cc-amex {
+        color: #1c6acf;
+        font-size: 32px;
+    }
+    
+    #fab-cc-mastercard {
+        font-size: 32px;
+        color: red;
+    }
+    
+    #fab-cc-discover {
+        font-size: 32px;
+        color: orange;
+    }
+    
+    #c-green {
+        color: green;
+    }
+    
+    #box {
+        height: 40px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ddd;
+    }
+    
+    #btn-primary.payment {
+        background-color: #1c6acf;
+        color: white;
+        border-radius: 10px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 24px;
+
+    }
+    
+    #form-div {
+        height: 50px;
+        position: relative;
+        margin-bottom: 24px;
+    }
+    
+    #form-control {
+        width: 100%;
+        height: 45px;
+        font-size: 14px;
+        border: 1px solid #DADCE0;
+        border-radius: 0;
+        outline: none;
+        padding: 2px;
+        background: none;
+        z-index: 1;
+        box-shadow: none;
+    }
+    
+    #form-label {
+        position: absolute;
+        left: 16px;
+        top: 10px;
+        background-color: #fff;
+        color: #80868B;
+        font-size: 16px;
+        transition: .3s;
+        text-transform: uppercase;
+    }
+    
+    #form-control:focus+#form-label {
+        top: -8px;
+        left: 12px;
+        color: #1A73E8;
+        font-size: 12px;
+        font-weight: 500;
+        z-index: 10;
+    }
+    
+    #form-control:not(:placeholder-shown)#form-control:not(:focus)+#form-label {
+        top: -8px;
+        left: 12px;
+        font-size: 12px;
+        font-weight: 500;
+        z-index: 10;
+    }
+    
+    #form-control:focus {
+        border: 1.5px solid #1A73E8;
+        box-shadow: none;
+    }
+
+        .mpesa-payment-container {
+            background-color: #ebebeb;
+            color: rgb(0, 0, 0);
+            width: 100%;
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .mpesa-payment-container h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .mpesa-payment-container p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Form Styling */
+        .mpesa-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .mpesa-details label {
+            margin-bottom: 5px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .mpesa-details input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #585454;
+            font-size: 16px;
+        }
+
+        .mpesa-details input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .pay-button {
+            background-color: #007bff;
+            color: rgb(0, 0, 0);
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .pay-button:hover {
+            background-color: #0056b3;
+        }
+        .payment-card {
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        th, td {
+            color: #000000;
+        }
+
+        /* Footer */
+        .mpesa-footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #000000;
+        }
+        @media (max-width:600px) {
+            #container{
+                margin: 5px;
+                width: 100%;
+            }
+
+            
+        }
+    </style>
+   
+   <div id="container">
+     <!-- <img width="100%" src="img/donate.gif" alt="">
+     <hr> -->
+    <div class="row">
+        <div class="col-lg-3 mb-lg-0 mb-3">
+            <a href="">
+                <div id="card" class="p-3">
+                    <div id="img-box">
+                        <img src="https://www.freepnglogos.com/uploads/visa-logo-download-png-21.png" alt="Visa">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 mb-lg-0 mb-3">
+            <a href="">
+                <div id="card" class="p-3">
+                    <div id="img-box">
+                        <img src="https://i0.wp.com/png.co.ke/wp-content/uploads/2023/02/Mpesa-Logo.png?fit=2560%2C1869&ssl=1" alt="mpesa">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 mb-lg-0 mb-3">
+            <a href="">
+                <div id="card" class="p-3">
+                    <div id="img-box">
+                        <img src="https://www.freepnglogos.com/uploads/mastercard-png/file-mastercard-logo-svg-wikimedia-commons-4.png" alt="MasterCard">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 mb-lg-0 mb-3">
+            <a href="">
+                <div id="card" class="p-3" >
+                    <div id="img-box" >
+                        <img src="https://www.pinclipart.com/picdir/big/122-1222671_pay-with-paypal-paypal-logo-high-resolution-clipart.png" alt="PayPal">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 mt-4">
+            <div id="card" class="p-3">
+                <p class="mb-0 fw-bold h4">Choose Your Payment Method</p>
+                <p class="mb-0">Support the mission of MAEEO with your donation through these secure payment options.</p>
+            </div>
+        </div>
+        
+        <div class="col-12">
+            <div id="card"  class="p-3">
+                <div class="card-body border p-0">
+                    <p>
+                        <a id="btn-primary" class="w-100 h-100 d-flex align-items-center justify-content-between" data-bs-toggle="collapse" href="#mpesa" role="button" aria-expanded="true" aria-controls="paypalCollapse">
+                            <span class="fw-bold">MPESA</span>
+                            
+                        </a>
+                    </p>
+                    <div class="collapse p-3 pt-0" id="mpesa">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            
+                                 
+                            <div class="col-8">
+                                <!-- M-Pesa Payment Section -->
+                               
+                                <div class="mpesa-payment-container">
+                                    <img style="width: 40%;" src="https://i0.wp.com/png.co.ke/wp-content/uploads/2023/02/Mpesa-Logo.png?fit=2560%2C1869&ssl=1" alt="MPESA">
+                       
+                                   <p>Stk push will be sent to your phone.</p>
+                                    
+                                    <div class="mpesa-details">
+                                        <label for="phone-number">Enter Your M-Pesa Number:</label>
+                                        <input type="tel" id="phone-number" placeholder="0712345678" />
+                                        
+                                        <label for="amount">Enter Amount to donate (Ksh):</label>
+                                        <input type="number" id="amount" placeholder="Amount" />
+                                        
+                                        <button class="pay-button text-white">Donate</button>
+                                    </div>
+                                    
+                                    <div class="mpesa-footer">
+                                        <p>Your support means a lot to us.</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body border p-0">
+                    <p>
+                        <a id="btn-primary" class="w-100 h-100 d-flex align-items-center justify-content-between" data-bs-toggle="collapse" href="#Bank" role="button" aria-expanded="true" aria-controls="paypalCollapse">
+                            <span class="fw-bold">Bank Transfer</span>
+                            <span id="fab-cc-paypal"></span>
+                        </a>
+                    </p>
+                    <div class="collapse p-3 pt-0" id="Bank">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            
+                            <div class="payment-card mx-auto">
+                                <img style="width:20%;" src="https://cdn4.iconfinder.com/data/icons/personal-business-finance-gray-series/64/gray-10-512.png" alt="Bank">
+                       
+                                <h3 class="text-primary">Bank Payment Details</h3>
+                                <div class="mt-3 text-start">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <th>Bank Name</th>
+                                                <td>Barclays Bank of Kenya</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Branch</th>
+                                                <td>Kitui Branch (Bank Code: 03; Branch Code: 015)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Address</th>
+                                                <td>P.O. Box 1206-90200, Kitui</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Account Name</th>
+                                                <td>Mundu Agricultural Environmental & Educational Organization</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Account No.</th>
+                                                <td>1064000</td>
+                                            </tr>
+                                            <tr>
+                                                <th>SWIFT Code</th>
+                                                <td>BARCKENX</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <button class="btn btn-primary copy-btn mt-3" onclick="copyBankDetails()">📋 Copy Payment Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body border p-0">
+                    <p>
+                        <a id="btn-primary" class="w-100 h-100 d-flex align-items-center justify-content-between" data-bs-toggle="collapse" href="#paypalCollapse" role="button" aria-expanded="true" aria-controls="paypalCollapse">
+                            <span class="fw-bold">PayPal</span>
+                            <span id="fab-cc-paypal"></span>
+                        </a>
+                    </p>
+                    <div class="collapse p-3 pt-0" id="paypalCollapse">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            
+                                 
+                            <div class="col-8 ">
+                                <!-- M-Pesa Payment Section -->
+                               
+                                <div class="mpesa-payment-container">
+                                    <img style="width: 40%;" src="https://th.bing.com/th/id/R.c01292cdd7f51d3520c75031fc479c2b?rik=0qZxmR9AXGhBdw&pid=ImgRaw&r=0" alt="PayPal">
+                       
+                                   <p>Enter your email to proceed.</p>
+                                    
+                                    <div class="mpesa-details">
+                                        <label for="phone-number">PayPal email:</label>
+                                        <strong>
+                                            <input style="width: 100%;" type="email" name="email" placeholder="sample@mail.com">
+                                        </strong>
+                                      <br>
+                                    
+                                       <P>Amount: <strong></strong></P>
+                                        <button class="pay-button text-white">Continue</button>
+                                    </div>
+                                    
+                                    <div class="mpesa-footer">
+                                        <p>Your support means a lot to us.</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body border p-0">
+                    <p>
+                        <a id="btn-primary" class="p-2 w-100 h-100 d-flex align-items-center justify-content-between" data-bs-toggle="collapse" href="#creditCardCollapse" role="button" aria-expanded="true" aria-controls="creditCardCollapse">
+                            <span class="fw-bold">Debit/Credit Card</span>
+                            <span>
+                                <span id="fab-cc-amex"></span>
+                                <span id="fab-cc-mastercard"></span>
+                                <span id="fab-cc-discover"></span>
+                            </span>
+                        </a>
+                    </p>
+                    <div class="collapse show p-3 pt-0" id="creditCardCollapse">
+                        <div class="row">
+                            <div class="col-lg-5 mb-lg-0 mb-3">
+                               <img height="40%" src=" https://www.ukdeedpolloffice.org/wp-content/uploads/2018/10/CreditCards.png" alt="">
+                                <p class="h4 mb-0">Amount:</p>
+                                <br>
+                              <p class="mb-0">Your donation will help provide educational resources to students in underserved communities. <br> <br> <i>Thank you for your support!</i></p>
+                            </div>
+                            <div class="col-lg-7">
+                                <form action="" id="form">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div id="form-div">
+                                                <input type="text" id="form-control" placeholder=" ">
+                                                <label for="" id="form-label">Card Number</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6">
+                                            <div id="form-div">
+                                                <input type="text" id="form-control" placeholder=" ">
+                                                <label for="" id="form-label">MM / yy</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6">
+                                            <div id="form-div">
+                                                <input type="password" id="form-control" placeholder=" ">
+                                                <label for="" id="form-label">CVV Code</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div id="form-div">
+                                                <input type="text" id="form-control" placeholder=" ">
+                                                <label for="" id="form-label">Name on the Card</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div id="btn-primary" class="payment">
+                                                Donate Now
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+              
+            </div>
+        </div>
+
+    </div>
+</div>
+
+ <br><br>
+
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-footer bg-primary text-white mt-5">
+    <div class="container">
+        <div class="row gx-5">
+            <div class="col-lg-8 col-md-6">
+                <div class="row gx-5">
+                    <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                        <h4 class="text-white mb-4">Get In Touch</h4>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-geo-alt text-white me-2"></i>
+                            <p class="text-white mb-0">Kenya Goshen Enterprises Building, <br>
+                                P.O. Box 2342 Machakos</p>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-envelope-open text-white me-2"></i>
+                            <p class="text-white mb-0">maeeo3002@gmail.com or maeeo2003@yahoo.com</p>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-telephone text-white me-2"></i>
+                            <p class="text-white mb-0">0722 469 720</p>
+                        </div>
+                        <div class="d-flex mt-4">
+                            <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-x"><STRong>X</STRong></i></a>
+                            <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-secondary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                        <h4 class="text-white mb-4">Quick Links</h4>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Home</a>
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>About Us</a>
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Our Services</a>
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Meet The Team</a>
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Latest Blog</a>
+                            <a class="text-white" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                        <h4 class="text-white mb-4">Popular Links</h4>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Home</a>
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>About Us</a>
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Our Services</a>
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Meet The Team</a>
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Latest Blog</a>
+                            <a class="text-white" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-lg-n5">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-secondary p-5">
+                    <h4 class="text-white">Get in touch</h4>
+                    <h6 class="text-white">Subscribe Our services</h6>
+                   
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                            <button class="btn btn-primary">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-0">&copy; <a class="text-secondary fw-bold" href="#">MAEEO</a>. All Rights Reserved. Designed by <a class="text-secondary fw-bold" href="https://pazinstar.github.io/Portfolio/"> Kelvin Mukaria</a></p>
+    </div>
+</div>
+
+
+
+
+<!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        function copyBankDetails() {
+            const text = `Bank Name: Barclays Bank of Kenya
+                Branch: Kitui Branch (Bank Code: 03; Branch Code: 015)
+                Address: P.O. Box 1206-90200, Kitui
+                Account Name: Mundu Agricultural Environmental & Educational Organization
+                Account No.: 1064000
+                SWIFT Code: BARCKENX`;
+
+            navigator.clipboard.writeText(text).then(() => {
+                alert("✅ Payment details copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+    </script>
+</body>
+
+</html>

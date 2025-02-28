@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> MAEEO</title>
+    <link rel="icon" type="image/png" href="img/logo.jpg">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="MAEEO" name="keywords">
+    <meta content="MAEEO" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Bootstrap JS and Popper.js (important for collapse functionality) -->
+
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid px-5 d-none d-lg-block">
+        <div class="row gx-5 py-3 align-items-center">
+            <div class="col-lg-3">
+                <div class="d-flex align-items-center justify-content-start">
+                    <i class="bi bi-phone-vibrate fs-1 text-primary me-2"></i>
+                    <h2 class="mb-0">0722 469 720</h2>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="d-flex flex-column align-items-center justify-content-center">
+                    <a href="index.html" class="navbar-brand ms-lg-5">
+                        <h1 class="m-0 display-4 text-primary"><span class="text-secondary">MA</span>EEO</h1>
+                       
+                    </a>
+                    <marquee style="color:green;" behavior="" direction="left">Mundu Agricultural Environmental and Educational Organization</marquee>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="d-flex align-items-center justify-content-end">
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-x"><STRong>X</STRong></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <nav class="navbar">
+        <div class="d-flex align-items-center justify-content-start">
+            <img id="logo_img" src="imgs/logo0.png" alt="">
+            <h2 id="maeeo_h2" class="mb-0">MAEEO</h2>
+        </div>
+        <label for="menu-toggle" class="hamburger">☰</label>
+        <input type="checkbox" id="menu-toggle">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+           
+            <a href="service.html">Service</a>
+            <a href="contact.html">Contact</a>
+            <a href="gallery.html">Gallery</a>
+             <div class="dropdown">
+                <a class="dropdown-button">
+                    Get Involved <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-content">
+                    <a href="soon.html">
+                        <i class="fas fa-handshake"></i> Volunteer
+                    </a>
+                    <a href="donate.html">
+                        <i class="fas fa-donate"></i> Donate
+                    </a>
+                    <a href="soon.html">
+                        <i class="fas fa-users"></i> Partner With Us
+                    </a>
+                    <a href="soon.html">
+                        <i class="fas fa-calendar-alt"></i> Attend Events
+                    </a>
+                    <a href="soon.html">
+                        <i class="fas fa-gavel"></i> Tenders
+                    </a>
+                    <a href="soon.html">
+                        <i class="fas fa-briefcase"></i> Careers
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+<style>
+    /* Ensure carousel container takes full width */
+    .carousel-inner {
+        position: relative;
+    }
+
+/* Overlay that covers the entire slide */
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Adjust transparency (0.5 = 50%) */
+    z-index: 1;
+}
+
+/* Caption styling */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    text-align: left;
+    width: auto;
+    max-width: 40%;
+    z-index: 2; /* Ensures text appears above overlay */
+    animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-60%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+}
+.carousel-item img{
+    height: 600px;
+    
+}
+
+.carousel-item h5{
+    font-size: 64px;
+    color: rgb(255, 123, 15);
+}
+
+.carousel-item p{
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+}
+.carousel-caption a ,.news  ,.events {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+       /* Vibrant orange */
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+   .news{
+    background: #d81a1a !important; 
+    margin-right: 20px;
+    width: 160px;
+   }
+   .events{
+    width: 160px;
+    background: #ff9800; 
+   }
+
+
+   .button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  color: white;
+  background-color: #ff0000;
+  
+  overflow: hidden;
+  transition: color 0.4s;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1fad3d;
+  transition: top 0.4s;
+  z-index: -1;
+}
+
+.button:hover::before {
+  top: 0;
+}
+
+.button:hover {
+  color: white;
+}
+
+
+
+
+
+
+
+
+    #logo_img{
+            height: 60px;
+            width: 60px;
+          
+    }
+    #maeeo_h2{
+            display: none;
+        }
+    .navbar{
+        gap:80px;
+    }
+    .carousel-caption a:hover {
+        background: #e68900;
+        transform: scale(1.05);
+    }
+    @media (max-width:700px) {
+        .carousel-item img{
+            height: 400px;
+            
+        }
+        .carousel-item h5{
+            font-size: 48px;
+            color: rgb(255, 123, 15);
+        }
+
+        .carousel-item p{
+            font-size: 16px;
+            color: rgb(255, 255, 255);
+        }
+        .carousel-caption {
+            
+            max-width: 100%;
+           
+        }
+        #maeeo_h2{
+            display: block;
+        }
+        #logo_img{
+            height: 50px;
+            width: 50px;
+        }
+        .carousel-caption a {
+      
+            padding: 6px 15px;
+           
+            font-size: 12px;
+           
+            border-radius: 4px;
+           
+    }
+    .carousel-caption {
+        top: 30%;
+      }
+      .news, .events{
+        width: 120px;
+      }
+    }
+
+</style>
+
+
+
+
+
+    <!-- Carousel Section -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="imgs/il.jpg" class="d-block w-100" alt="Slide 1">
+                <!-- <img src="https://th.bing.com/th/id/R.e36be3a522ab86c5cb3ce29fbe400d25?rik=653A1%2fNiADAAIw&pid=ImgRaw&r=0" class="d-block w-100" alt="Slide 1"> -->
+               
+                <div class="carousel-caption">
+                    <h5>MAEEO</h5>
+                    <p>Mundu Agricultural Environmental & Educational Organization</p>
+                
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imgs/maize0.jpeg" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption">
+                    <h5>News & Events</h5>
+                    <p>Thank you for visiting our website! We are excited to share with you the latest news and events within our Organization. You can always stay up-to-date with the latest happenings by checking out this section.</p>
+                    <div class="buttons">
+                        <a class="news" href="">Lattest News</a>
+                        <a class="events" href=""> Events</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imgs/planting.jpg" class="d-block w-100" alt="Slide 3">
+                <div class="carousel-caption">
+                    <h5>Your Support Matters</h5>
+                    <p>Your generous donation helps us uplift communities, protect the environment, and drive sustainable agriculture. Every donation makes a difference.</p>
+                    <a class="button" href="donate.html"> Donate to support</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+
+
+
+<!-- 
+    <div class="container-fluid p-0" >
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="imgs/home.png" alt="Image">
+                    <div class="carousel-caption top-0 bottom-0 start-0 end-0 d-flex flex-column align-items-center justify-content-center">
+                        <div class="text-start p-5" style="max-width: 900px;">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="imgs/maize.jpeg" style="filter: blur(3px);" alt="Image">
+                    <div class="carousel-caption top-0 bottom-0 start-0 end-0 d-flex flex-column align-items-center justify-content-center">
+                        <div class="text-start p-5" style="max-width: 900px;">
+                            <h3 class="text-white">Organic farming</h3>
+                            <h2 class="display-1 mb-md-4 text-white">Organic Fruits For Better Health</h2>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Explore</a>
+                            <a href="" class="btn btn-secondary py-md-3 px-md-5">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+  -->
+    <!-- Banner Start -->
+     <br>
+     <br>
+    <div class="container-fluid banner mb-5">
+        <div class="container">
+            <div class="row gx-0">
+                <div class="col-md-6">
+                    <div class="bg-primary bg-vegetable d-flex flex-column justify-content-center p-5" style="height: 300px;">
+                        <h3 class="text-white mb-3">Environmental conservation</h3>
+                        <p class="text-white">We are dedicated to preserving our natural resources and protecting ecosystems. .</p>
+                        <a class="text-white fw-bold" href="">Read More<i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="bg-secondary bg-fruit d-flex flex-column justify-content-center p-5" style="height: 300px;">
+                       
+                        <h3 class="text-white mb-3">Organic farming</h3>
+                        <p class="text-white">We support eco-friendly farming practices to ensure sustainable food production and environmental protection.</p>
+                        <a class="text-white fw-bold" href="">Read More<i class="bi bi-arrow-right ms-2"></i></a>
+                       
+                       
+                    </div>
+                </div>
+            </div>
+            <br>
+            <hr>
+        </div>
+    </div>
+    <!-- Banner Start -->
+
+    <!-- About Start -->
+    <div class="container-fluid about pt-5">
+        <div class="container">
+        
+            <div class="row gx-5">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="d-flex border border-5 border-primary">
+                        <img class="img-fluid mt-auto mx-auto" src="imgs/demo.jpg">
+                    </div>
+                </div>
+                <div class="col-lg-6 pb-5">
+                    <div class="mb-3 pb-2">
+                       
+                        <h1 class="display-5">We Empower Communities through Sustainable Agriculture & Conservation</h1>
+                    </div>
+                    <p class="mb-4">Mundu Agricultural Environmental and Educational Organization (MAEEO), established in 2003, is a non-profit NGO based in Machakos, Kenya. Focused on the marginalized and drought-prone regions of Machakos, Makueni, and Kitui counties, MAEEO works directly with grassroots community groups, particularly women and youth, to implement sustainable projects in ecological agriculture, environmental conservation, and community empowerment.</p>
+                    
+                </div>
+            </div>
+            <div class="row gx-5 gy-4 ms-3 me-3">
+                      
+                <div class="col-sm-6">
+                    <i class="fa fa-seedling display-1 text-secondary"></i>
+                    <h4>Sustainable Solutions</h4>
+                    <p class="mb-0">We drive lasting change by empowering communities to implement sustainable projects that improve their livelihoods.</p>
+                </div>
+                <div class="col-sm-6">
+                    <i class="fa fa-award display-1 text-secondary"></i>
+                    <h4>Award Winning</h4>
+                    <p class="mb-0">Our impactful work in agriculture, conservation, and community empowerment has been recognized with multiple awards.</p>
+                </div>
+            </div>
+            <br><br>
+
+            
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Facts Start -->
+    <div class="container-fluid bg-primary facts py-5 mb-5">
+        <div class="container py-5">
+            <div class="row gx-5 gy-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex">
+                        <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-star fs-4 text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white">Our Experience</h5>
+                            <h1 class="display-5 text-white mb-0"><span data-toggle="counter-up">100</span>% </h1>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex">
+                        <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-users fs-4 text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white">Directly impacted </h5>
+                            <h1 class="display-5 text-white mb-0" data-toggle="counter-up">9000 </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex">
+                        <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-check fs-4 text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white">Indirectly  impacted</h5>
+                            <h1 class="display-5 text-white mb-0" data-toggle="counter-up">60000</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex">
+                        <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-mug-hot fs-4 text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white">Total communities</h5>
+                            <h1 class="display-5 text-white mb-0" data-toggle="counter-up">300</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+    
+
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="mb-3">
+                        <h6 class="text-primary text-uppercase">Services</h6>
+                        <h2 class="display-5">Empowering Communities for a Sustainable Future</h2>
+                    </div>
+                 <a href="" class="btn btn-primary py-md-3 px-md-5">Contact Us</a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa fa-seedling display-1 text-primary mb-3"></i>
+                        <h4>Sustainable Agriculture Promotion</h4>
+                        <p class="mb-0">We promote sustainable agriculture and organic farming to enhance food security and environmental health.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa fa-tree display-1 text-primary mb-3"></i>
+                        <h4>Environmental Conservation</h4>
+                        <p class="mb-0">Our conservation efforts include tree planting and effective water management to restore ecosystems.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa fa-sun display-1 text-primary mb-3"></i>
+                        <h4>Climate Change Mitigation</h4>
+                        <p class="mb-0">We implement strategies to mitigate climate change and help communities adapt to its effects.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa fa-users display-1 text-primary mb-3"></i>
+                        <h4>Economic Empowerment</h4>
+                        <p class="mb-0">Through vocational training, we empower women and youth to improve their economic opportunities.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa fa-child display-1 text-primary mb-3"></i>
+                        <h4>Child Protection & Development</h4>
+                        <p class="mb-0">We focus on the protection and development of orphans and vulnerable children in our communities.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa fa-comments display-1 text-primary mb-3"></i>
+                        <h4>Consultancy Services</h4>
+                        <p class="mb-0">Our consultancy services support sustainable development initiatives across various sectors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+  
+
+
+    
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-footer bg-primary text-white mt-5">
+    <div class="container">
+        <div class="row gx-5">
+            <div class="col-lg-8 col-md-6">
+                <div class="row gx-5">
+                    <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                        <h4 class="text-white mb-4">Get In Touch</h4>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-geo-alt text-white me-2"></i>
+                            <p class="text-white mb-0">Kenya Goshen Enterprises Building, <br>
+                                P.O. Box 2342 Machakos</p>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-envelope-open text-white me-2"></i>
+                            <p class="text-white mb-0">maeeo3002@gmail.com or maeeo2003@yahoo.com</p>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-telephone text-white me-2"></i>
+                            <p class="text-white mb-0">0722 469 720</p>
+                        </div>
+                        <div class="d-flex mt-4">
+                            <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-x"><STRong>X</STRong></i></a>
+                            <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-secondary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                        <h4 class="text-white mb-4">Quick Links</h4>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Home</a>
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>About Us</a>
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Our Services</a>
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Meet The Team</a>
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Latest Blog</a>
+                            <a class="text-white" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                        <h4 class="text-white mb-4">Popular Links</h4>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Home</a>
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>About Us</a>
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Our Services</a>
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Meet The Team</a>
+                            <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Latest Blog</a>
+                            <a class="text-white" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-lg-n5">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-secondary p-5">
+                    <h4 class="text-white">Get in touch</h4>
+                    <h6 class="text-white">Subscribe Our services</h6>
+                   
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                            <button class="btn btn-primary">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-0">&copy; <a class="text-secondary fw-bold" href="#">MAEEO</a>. All Rights Reserved. <br> Designed by <a class="text-secondary fw-bold" href="https://pazinstar.github.io/Portfolio/"> Kelvin Mukaria</a></p>
+    </div>
+</div>
+<style>
+    /* Media query for smaller screens (phones) */
+    @media screen and (max-width: 768px) {
+        #callButton img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+</style>
+<a href="tel:0722469720" id="callButton" style=" position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <img style="display: inline-block; border: none;border-radius: 50%; cursor: pointer; width: 100px; height: 100px;" src="imgs/call.gif" alt="Call Now">
+</a>
+
+<script>
+    // Show the call button when the page loads
+    window.onload = function() {
+        var callButton = document.getElementById('callButton');
+        callButton.style.display = 'inline-block'; // Display the button
+
+        // Hide the call button after 5 seconds
+        setTimeout(function() {
+            callButton.style.display = 'none'; // Hide the button
+        }, 10000); // 5000 milliseconds (5 seconds)
+    };
+</script>
+<!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
