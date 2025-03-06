@@ -33,23 +33,24 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <style>
-        body {
-    
+<style>
+    body {
+
+        opacity: 0;
+        animation: fadeIn 1s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
             opacity: 0;
-            animation: fadeIn 1s ease-in forwards;
         }
-    
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-    
-            to {
-                opacity: 1;
-            }
+
+        to {
+            opacity: 1;
         }
-    </style>
+    }
+</style>
+
 </head>
 
 <body>
@@ -86,8 +87,6 @@
         </div>
     </div>
     <!-- Topbar End -->
-
-    <!-- Navbar Start -->
     <nav class="navbar">
 
         <label for="menu-toggle" class="hamburger">☰</label>
@@ -126,99 +125,194 @@
         </div>
         </div>
     </nav>
-    <!-- Navbar End -->
+
+
+
+    <div id="container">
 
 
 
 
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
 
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="mx-auto text-center mb-5" style="max-width: 500px;">
-                <h6 class="text-primary text-uppercase">Contact Us</h6>
-                <h1 class="display-5">Please Feel Free To Contact Us</h1>
-            </div>
-            <div class="row g-0">
-                <div class="col-lg-7">
-                    <div class="bg-primary h-100 p-5">
-                        <script
-                            src="https://www.google.com/recaptcha/api.js?render=6LddmccqAAAAAMVhZ9Lnmg0dhsHLzOziuF9pB8xl"></script>
+            .careers-hero {
+                background: url('https://th.bing.com/th?id=OIP.MgwYM1vx9Blg-mTCFn_T8AHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&cb=15&pid=3.1&rm=2') center/cover no-repeat;
+                color: white;
+                text-align: center;
+                padding: 80px 20px;
+                position: relative;
+            }
 
-                        <form action="send_email.php" method="POST">
-                            <div class="row g-3">
-                                <div class="col-6">
-                                    <input type="text" name="name" class="form-control bg-light border-0 px-4"
-                                        placeholder="Your Name" style="height: 55px;" required>
-                                </div>
-                                <div class="col-6">
-                                    <input type="email" name="email" class="form-control bg-light border-0 px-4"
-                                        placeholder="Your Email" style="height: 55px;" required>
-                                </div>
-                                <div class="col-12">
-                                    <input type="text" name="subject" class="form-control bg-light border-0 px-4"
-                                        placeholder="Subject" style="height: 55px;" required>
-                                </div>
-                                <div class="col-12">
-                                    <textarea name="message" class="form-control bg-light border-0 px-4 py-3" rows="4"
-                                        placeholder="Message" required></textarea>
-                                </div>
-                                <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
-                                <div class="col-12">
-                                    <button class="btn btn-secondary w-100 py-3" type="submit">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
+            .careers-hero::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+            }
 
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="bg-secondary h-100 p-5">
-                        <h2 class="text-white mb-4">Get In Touch</h2>
-                        <div class="d-flex mb-4">
-                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center"
-                                style="width: 60px; height: 60px;">
-                                <i class="bi bi-geo-alt fs-4 text-white"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h5 class="text-white">Our Office</h5>
-                                <span class="text-white">Kenya Goshen Enterprises Building, <br>
-                                    P.O. Box 2342 Machakos </span>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-4">
-                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center"
-                                style="width: 60px; height: 60px;">
-                                <i class="bi bi-envelope-open fs-4 text-white"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h5 class="text-white">Email Us</h5>
-                                <span class="text-white">maeeo3002@gmail.com <br> maeeo2003@yahoo.com</span>
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center"
-                                style="width: 60px; height: 60px;">
-                                <i class="bi bi-phone-vibrate fs-4 text-white"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h5 class="text-white">Call Us</h5>
-                                <span class="text-white">0722 469 720 </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            .careers-hero h1,
+            .careers-hero p {
+                position: relative;
+                z-index: 1;
+            }
+
+            .job-listings,
+            .donate-support,
+            .apply {
+                text-align: center;
+                padding: 40px;
+                background-color: white;
+                margin: 30px auto;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                max-width: 800px;
+            }
+
+            .donate-support {
+                background-color: #f93;
+                color: #333;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .donate-support p {
+                font-size: 18px;
+                margin: 20px 0;
+            }
+
+            .apply input {
+                width: 80%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            button {
+                background-color: #004d40;
+                color: white;
+                border: none;
+                padding: 12px 24px;
+                font-size: 18px;
+                cursor: pointer;
+                border-radius: 5px;
+                margin-top: 10px;
+                transition: background 0.3s;
+            }
+
+            .button {
+                position: relative;
+                display: inline-block;
+                padding: 12px 24px;
+                font-size: 16px;
+                color: white;
+                background-color: #ff0000;
+
+                overflow: hidden;
+                transition: color 0.4s;
+            }
+
+            h2 {
+                color: white;
+            }
+
+            button:hover {
+                background-color: #00352f;
+            }
+
+            .loader {
+                border: 4px solid #f3f3f3;
+                border-top: 4px solid #004d40;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                animation: spin 1s linear infinite;
+                display: none;
+                margin: 10px auto;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .success {
+                color: green;
+                font-size: 18px;
+                display: none;
+                margin-top: 10px;
+            }
+
+            h1 {
+                color: white !important;
+            }
+
+            .jobopenings,
+            .job-listings p,
+            .apply p {
+                color: black;
+            }
+        </style>
+
+        <section class="careers-hero">
+            <h1>Join Our Team at MAEEO</h1>
+            <p>Be part of a dynamic team making a difference in agriculture, environment, and education.</p>
+        </section>
+
+        <section class="job-listings">
+            <h2 class="jobopenings">Current Openings</h2>
+            <p>There are no job openings at the moment. Please check back later.</p>
+        </section>
+
+        <section class="donate-support">
+            <h2>Donate to Support MAEEO's Projects</h2>
+            <p>Your contribution helps us continue our mission to improve agriculture, the environment, and education.
+            </p>
+            <button onclick="window.location.href='donate.html'" class="button">Donate Now</button>
+        </section>
+
+        <section class="apply">
+            <h2>Stay Connected</h2>
+            <p>Subscribe to receive updates about our projects and opportunities.</p>
+            <form id="subscribeForm" onsubmit="subscribe(event)">
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+                <div class="loader" id="loader"></div>
+                <p class="success" style="color: green !important;" id="successMessage">✔ Subscription successful!</p>
+            </form>
+        </section>
+
+        <script>
+            function subscribe(event) {
+                event.preventDefault();
+                document.getElementById('loader').style.display = 'block';
+                document.getElementById('successMessage').style.display = 'none';
+                setTimeout(() => {
+                    document.getElementById('loader').style.display = 'none';
+                    document.getElementById('successMessage').style.display = 'block';
+                }, 2000);
+            }
+        </script>
+
+
+
     </div>
-    <!-- Contact End -->
-    <script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6LddmccqAAAAAMVhZ9Lnmg0dhsHLzOziuF9pB8xl', { action: 'submit' }).then(function (token) {
-                document.getElementById('g-recaptcha-response').value = token;
-            });
-        });
-    </script>
+
+    <br><br>
 
 
     <!-- Footer Start -->
@@ -314,93 +408,10 @@
             </p>
         </div>
     </div>
-    <style>
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
 
-        .popup {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            max-width: 400px;
-            width: 90%;
-        }
 
-        .popup.success {
-            border: 2px solid #4CAF50;
-        }
 
-        .popup.error {
-            border: 2px solid #f44336;
-        }
 
-        .popup button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007BFF;
-            color: white;
-            cursor: pointer;
-        }
-
-        .popup button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-    <!-- <?php if ($message): ?>
-    <div class="popup-overlay" id="popup-overlay">
-        <div class="popup <?= $messageType ?>">
-            <p>
-                <?= htmlspecialchars($message) ?>
-            </p>
-            <button onclick="closePopup()">Close</button>
-        </div>
-    </div>
-    <?php endif; ?> -->
-
-    <script>
-        function closePopup() {
-            const popupOverlay = document.getElementById('popup-overlay');
-            if (popupOverlay) {
-                popupOverlay.remove();
-            }
-        }
-    </script>
-
-    <script>
-
-        $(document).ready(function () {
-            $('form').submit(function (event) {
-                event.preventDefault(); // Prevent default form submission
-
-                $.ajax({
-                    url: $(this).attr('action'),
-                    type: 'POST',
-                    data: $(this).serialize(),
-                    success: function (response) {
-                        alert(response); // Display the response from the server
-                    },
-                    error: function () {
-                        alert('Error: Unable to send message.');
-                    }
-                });
-            });
-        });
-
-    </script>
     <!-- Footer End -->
     <!-- Back to Top -->
     <a href="#" class="btn btn-secondary py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -416,6 +427,22 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        function copyBankDetails() {
+            const text = `Bank Name: Barclays Bank of Kenya
+                Branch: Kitui Branch (Bank Code: 03; Branch Code: 015)
+                Address: P.O. Box 1206-90200, Kitui
+                Account Name: Mundu Agricultural Environmental & Educational Organization
+                Account No.: 1064000
+                SWIFT Code: BARCKENX`;
+
+            navigator.clipboard.writeText(text).then(() => {
+                alert("✅ Payment details copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+    </script>
 </body>
 
 </html>

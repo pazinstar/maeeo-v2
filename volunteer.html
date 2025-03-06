@@ -33,23 +33,8 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <style>
-        body {
-    
-            opacity: 0;
-            animation: fadeIn 1s ease-in forwards;
-        }
-    
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-    
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
+
+
 </head>
 
 <body>
@@ -86,8 +71,6 @@
         </div>
     </div>
     <!-- Topbar End -->
-
-    <!-- Navbar Start -->
     <nav class="navbar">
 
         <label for="menu-toggle" class="hamburger">☰</label>
@@ -126,99 +109,289 @@
         </div>
         </div>
     </nav>
-    <!-- Navbar End -->
 
 
 
+    <div id="container">
 
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+                opacity: 0;
+                animation: fadeIn 1s ease-in forwards;
+            }
 
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="mx-auto text-center mb-5" style="max-width: 500px;">
-                <h6 class="text-primary text-uppercase">Contact Us</h6>
-                <h1 class="display-5">Please Feel Free To Contact Us</h1>
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+
+            .volunteer-hero {
+                background: url('https://mtclearning.com/wp-content/uploads/2021/06/volunteer-make-difference.gif') center/cover no-repeat;
+                color: white;
+                text-align: center;
+                padding: 100px 20px;
+                position: relative;
+                transform: translateY(-50px);
+                animation: slideIn 1s ease-in-out forwards;
+            }
+
+            @keyframes slideIn {
+                from {
+                    transform: translateY(-50px);
+                    opacity: 0;
+                }
+
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            .volunteer-hero::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.6);
+            }
+
+            .volunteer-hero h1,
+            .volunteer-hero p {
+                position: relative;
+                z-index: 1;
+            }
+
+            .volunteer-content {
+                max-width: 900px;
+                margin: 30px auto;
+                padding: 20px;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                animation: fadeInUp 1.2s ease-in-out;
+            }
+
+            @keyframes fadeInUp {
+                from {
+                    transform: translateY(30px);
+                    opacity: 0;
+                }
+
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            .volunteer-content h2 {
+                text-align: center;
+            }
+
+            .benefits ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            .benefits li {
+                padding: 10px 0;
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                opacity: 0;
+                animation: fadeInUp 1s ease-in-out forwards;
+            }
+
+            .benefits li::before {
+                content: "✔";
+                color: green;
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+            .apply-form {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .apply-form input,
+            .apply-form textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            button {
+                background-color: green;
+                color: white;
+                border: none;
+                padding: 12px 24px;
+                font-size: 18px;
+                cursor: pointer;
+                border-radius: 5px;
+                margin-top: 10px;
+                transition: background 0.3s;
+            }
+
+            button:hover {
+                background-color: #00352f;
+            }
+
+            section p,
+            section li {
+                color: black;
+            }
+
+            section {
+                padding-left: 20px;
+            }
+
+            h1,
+            .volunteer-hero p {
+                color: white;
+            }
+
+            .main {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .col {
+                flex: 1;
+                min-width: 300px;
+                text-align: center;
+            }
+
+            .success {
+                color: green;
+                font-size: 18px;
+                display: none;
+                margin-top: 10px;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .loader {
+                border: 4px solid #f3f3f3;
+                border-top: 4px solid #004d40;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                animation: spin 1s linear infinite;
+                display: none;
+                margin: 10px auto;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .volunteer-hero {
+                    padding: 60px 20px;
+                }
+
+                .main {
+                    flex-direction: column;
+                }
+
+                img {
+                    max-height: 100px;
+
+                }
+            }
+        </style>
+
+        <section class="volunteer-hero">
+            <h1>Volunteer with MAEEO</h1>
+            <p>Make a lasting impact on communities through agriculture, environmental, and educational projects.</p>
+        </section>
+
+        <section class="volunteer-content">
+            <h2>Why Volunteer with Us?</h2>
+            <p>At MAEEO, we believe in empowering individuals to create change. Volunteering with us means being part of
+                meaningful projects that uplift communities and promote sustainable development.</p>
+
+            <div class="benefits">
+                <h3>Benefits of Volunteering</h3>
+                <ul>
+                    <li>Gain hands-on experience in environmental conservation and agricultural projects.</li>
+                    <li>Enhance your leadership and teamwork skills.</li>
+                    <li>Work alongside professionals and experts in the field.</li>
+                    <li>Make a real difference in underprivileged communities.</li>
+                    <li>Receive a certificate of appreciation for your contribution.</li>
+                </ul>
             </div>
-            <div class="row g-0">
-                <div class="col-lg-7">
-                    <div class="bg-primary h-100 p-5">
-                        <script
-                            src="https://www.google.com/recaptcha/api.js?render=6LddmccqAAAAAMVhZ9Lnmg0dhsHLzOziuF9pB8xl"></script>
+        </section>
 
-                        <form action="send_email.php" method="POST">
-                            <div class="row g-3">
-                                <div class="col-6">
-                                    <input type="text" name="name" class="form-control bg-light border-0 px-4"
-                                        placeholder="Your Name" style="height: 55px;" required>
-                                </div>
-                                <div class="col-6">
-                                    <input type="email" name="email" class="form-control bg-light border-0 px-4"
-                                        placeholder="Your Email" style="height: 55px;" required>
-                                </div>
-                                <div class="col-12">
-                                    <input type="text" name="subject" class="form-control bg-light border-0 px-4"
-                                        placeholder="Subject" style="height: 55px;" required>
-                                </div>
-                                <div class="col-12">
-                                    <textarea name="message" class="form-control bg-light border-0 px-4 py-3" rows="4"
-                                        placeholder="Message" required></textarea>
-                                </div>
-                                <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
-                                <div class="col-12">
-                                    <button class="btn btn-secondary w-100 py-3" type="submit">Send Message</button>
-                                </div>
-                            </div>
+        <section class="volunteer-content">
+            <h2>How to Get Involved</h2>
+            <p>We have various opportunities for volunteers, including community outreach, environmental cleanup,
+                educational programs, and more. Fill in the form below to get started.</p>
+            <div class="main">
+                <div class="col">
+                    <img src="https://www.pngitem.com/pimgs/m/427-4270733_volunteering-png-transparent-png.png"
+                        alt="Volunteer">
+                </div>
+                <div class="col">
+                    <div class="apply-form">
+                        <h3>Sign Up to Volunteer</h3>
+                        <form id="volunteerForm" onsubmit="subscribe(event)">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="message" placeholder="Tell us why you want to volunteer" rows="4"
+                                required></textarea>
+                            <button type="submit">Apply Now</button>
+                            <div class="loader" id="loader"></div>
+                            <p class="success" style="color: green !important;" id="successMessage">✔ Application
+                                successful!</p>
                         </form>
-
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="bg-secondary h-100 p-5">
-                        <h2 class="text-white mb-4">Get In Touch</h2>
-                        <div class="d-flex mb-4">
-                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center"
-                                style="width: 60px; height: 60px;">
-                                <i class="bi bi-geo-alt fs-4 text-white"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h5 class="text-white">Our Office</h5>
-                                <span class="text-white">Kenya Goshen Enterprises Building, <br>
-                                    P.O. Box 2342 Machakos </span>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-4">
-                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center"
-                                style="width: 60px; height: 60px;">
-                                <i class="bi bi-envelope-open fs-4 text-white"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h5 class="text-white">Email Us</h5>
-                                <span class="text-white">maeeo3002@gmail.com <br> maeeo2003@yahoo.com</span>
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center"
-                                style="width: 60px; height: 60px;">
-                                <i class="bi bi-phone-vibrate fs-4 text-white"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h5 class="text-white">Call Us</h5>
-                                <span class="text-white">0722 469 720 </span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <script>
+            function subscribe(event) {
+                event.preventDefault();
+                document.getElementById('loader').style.display = 'block';
+                document.getElementById('successMessage').style.display = 'none';
+                setTimeout(() => {
+                    document.getElementById('loader').style.display = 'none';
+                    document.getElementById('successMessage').style.display = 'block';
+                }, 2000);
+            }
+        </script>
+
+
+
     </div>
-    <!-- Contact End -->
-    <script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6LddmccqAAAAAMVhZ9Lnmg0dhsHLzOziuF9pB8xl', { action: 'submit' }).then(function (token) {
-                document.getElementById('g-recaptcha-response').value = token;
-            });
-        });
-    </script>
+
+    <br><br>
 
 
     <!-- Footer Start -->
@@ -314,93 +487,10 @@
             </p>
         </div>
     </div>
-    <style>
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
 
-        .popup {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            max-width: 400px;
-            width: 90%;
-        }
 
-        .popup.success {
-            border: 2px solid #4CAF50;
-        }
 
-        .popup.error {
-            border: 2px solid #f44336;
-        }
 
-        .popup button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007BFF;
-            color: white;
-            cursor: pointer;
-        }
-
-        .popup button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-    <!-- <?php if ($message): ?>
-    <div class="popup-overlay" id="popup-overlay">
-        <div class="popup <?= $messageType ?>">
-            <p>
-                <?= htmlspecialchars($message) ?>
-            </p>
-            <button onclick="closePopup()">Close</button>
-        </div>
-    </div>
-    <?php endif; ?> -->
-
-    <script>
-        function closePopup() {
-            const popupOverlay = document.getElementById('popup-overlay');
-            if (popupOverlay) {
-                popupOverlay.remove();
-            }
-        }
-    </script>
-
-    <script>
-
-        $(document).ready(function () {
-            $('form').submit(function (event) {
-                event.preventDefault(); // Prevent default form submission
-
-                $.ajax({
-                    url: $(this).attr('action'),
-                    type: 'POST',
-                    data: $(this).serialize(),
-                    success: function (response) {
-                        alert(response); // Display the response from the server
-                    },
-                    error: function () {
-                        alert('Error: Unable to send message.');
-                    }
-                });
-            });
-        });
-
-    </script>
     <!-- Footer End -->
     <!-- Back to Top -->
     <a href="#" class="btn btn-secondary py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -416,6 +506,22 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        function copyBankDetails() {
+            const text = `Bank Name: Barclays Bank of Kenya
+                Branch: Kitui Branch (Bank Code: 03; Branch Code: 015)
+                Address: P.O. Box 1206-90200, Kitui
+                Account Name: Mundu Agricultural Environmental & Educational Organization
+                Account No.: 1064000
+                SWIFT Code: BARCKENX`;
+
+            navigator.clipboard.writeText(text).then(() => {
+                alert("✅ Payment details copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+    </script>
 </body>
 
 </html>

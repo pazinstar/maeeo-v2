@@ -34,6 +34,22 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <style>
+        body {
+    
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+    
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+    
+            to {
+                opacity: 1;
+            }
+        }
+    
         .maeeo-section {
             padding: 50px 0;
             background-color: #f8f9fa;
@@ -197,7 +213,7 @@
                     Get Involved <i class="fas fa-chevron-down"></i>
                 </a>
                 <div class="dropdown-content">
-                    <a href="soon.html">
+                    <a href="volunteer.html">
                         <i class="fas fa-handshake"></i> Volunteer
                     </a>
                     <a href="donate.html">
@@ -212,7 +228,7 @@
                     <a href="soon.html">
                         <i class="fas fa-gavel"></i> Tenders
                     </a>
-                    <a href="soon.html">
+                    <a href="careers.html">
                         <i class="fas fa-briefcase"></i> Careers
                     </a>
                 </div>
